@@ -1,6 +1,7 @@
 import { useAuth } from "../lib/UseAuth";
 import { useState, useRef } from "react";
 import { Eye, EyeClosed } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function SignIn() {
   const {
@@ -13,6 +14,7 @@ export default function SignIn() {
     setUser,
   } = useAuth();
 
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [displayName, setDisplayName] = useState("");
@@ -67,6 +69,7 @@ export default function SignIn() {
       if (data) {
         setSuccess("Sign up successful! ");
         setShowAuth(false);
+        navigate("/dashboard");
         {
           console.log(data);
         }

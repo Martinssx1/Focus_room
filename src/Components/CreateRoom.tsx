@@ -62,7 +62,7 @@ export default function CreateRoom({
 
   async function handleRedirection() {
     if (!user) return;
-    const { error, data } = await redirectToRoom(user.id, roomName);
+    const { error, data } = await redirectToRoom( roomName);
 
     if (error) {
       console.error("Error fetching room:", error);

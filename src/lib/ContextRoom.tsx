@@ -10,12 +10,12 @@ export default function ContextRoom({
 }) {
   const [roomName, setRoomName] = useState("");
   const { user } = useAuth();
-  async function redirectToRoom(userId: string, roomName: string) {
+  async function redirectToRoom(roomName: string) {
     return await supabase
       .from("roomtable")
       .select("room_id")
       .eq("room_name", roomName)
-      .eq("created_by", userId)
+
       .maybeSingle();
   }
   async function insertRoom(roomName: string, userId: string) {

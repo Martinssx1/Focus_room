@@ -29,10 +29,7 @@ export type AuthContextType = {
   // insertRoom: Database["public"]["Tables"]["roomtable"]["Insert"];
 };*/
 export type RoomContextType = {
-  redirectToRoom: (
-    userId: string,
-    roomName: string,
-  ) => Promise<
+  redirectToRoom: (roomName: string) => Promise<
     PostgrestSingleResponse<{
       room_id: string;
     } | null>
