@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.btn {
+  @apply dark:bg-white bg-black text-white dark:text-black font-bold px-8 rounded-lg py-2 cursor-pointer hover:scale-110 transition-all duration-[0.4s];
+}
+
+.containerdiff {
+  @apply flex flex-col md:flex-row gap-3;
+}
+.questionscontainer {
+  @apply bg-white  dark:bg-black rounded-lg p-6  shadow-sm hover:shadow-md transition-shadow border border-gray-200 hover:border-gray-300;
+}
